@@ -62,7 +62,7 @@
         </div>
       </div>
       <!-- SUB MENU -->
-      <div id="categories" class="mt-6 shadow-xl rounded">
+      <div id="categories" class="mt-4 shadow-xl rounded">
         <ul
           id="ul"
           class="menu menu-horizontal w-full flex flex-col lg:flex-row justify-between items-center bg-base-100 rounded-box"
@@ -73,6 +73,111 @@
         </ul>
       </div>
     </header>
+
+    <!-- MAIN SECTION -->
+    <main class="px-4 lg:px-12 my-12">
+      <!-- ITEMS FOUND SECTION -->
+      <section>
+        <div class="alert alert-info shadow-lg">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              class="stroke-info flex-shrink-0 w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+            <span>
+              <span id="items">0</span> items found for category
+              <span id="categories-name"></span>.</span
+            >
+          </div>
+        </div>
+      </section>
+      <!-- SORT BY SECTION & TRENDING -->
+      <section
+        class="my-12 flex flex-col lg:flex-row justify-between items-center"
+      >
+        <!-- SORT BY -->
+        <div class="flex items-center">
+          <p class="pr-2">Sort By View:</p>
+          <div>
+            <select class="select select-primary w-full max-w-xs">
+              <option disabled selected>Default</option>
+              <option>Game of Thrones</option>
+              <option>Lost</option>
+              <option>Breaking Bad</option>
+              <option>Walking Dead</option>
+            </select>
+          </div>
+        </div>
+        <!-- TRENDING  -->
+        <div>
+          <button class="btn btn-active btn-primary">Today's Pick</button>
+          <button class="btn btn-outline btn-primary">Trending</button>
+        </div>
+      </section>
+      <!-- CARD SECTION -->
+      <section id="card-section">
+        <!-- <div class="card card-side bg-base-100 shadow-xl">
+          <figure>
+            <img
+              src="/images/stock/photo-1635805737707-575885ab0820.jpg"
+              alt="Movie"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">New movie is released!</h2>
+            <p>Click the button to watch on Jetflix app.</p>
+            <!-- <div class="card-actions items-center gap-4 justify-between">
+               author -->
+        <!-- <div class="flex gap-2">
+                <div class="avatar">
+                  <div class="w-12">
+                    <img src="./assets/Avatar.png" />
+                  </div>
+                </div>
+                <div>
+                  <h2>Jane Cooper</h2>
+                  <p>jan 10, 2022</p>
+                </div>
+              </div> -->
+        <!-- watch -->
+        <!-- <div class="flex gap-2">
+                <i class="fa-regular fa-eye"></i>
+                <p>1.5M</p>
+              </div> -->
+        <!-- star -->
+        <!-- <div>
+                <div class="rating">
+                  <input type="radio" name="rating-1" class="mask mask-star" />
+                  <input
+                    type="radio"
+                    name="rating-1"
+                    class="mask mask-star"
+                    checked
+                  />
+                  <input type="radio" name="rating-1" class="mask mask-star" />
+                  <input type="radio" name="rating-1" class="mask mask-star" />
+                  <input type="radio" name="rating-1" class="mask mask-star" />
+                </div>
+              </div> -->
+        <!-- details btn -->
+        <!-- <div>
+                <button class="btn btn-primary">Details</button>
+              </div>
+            </div> -->
+
+        <!-- </div>
+        </div> -->
+      </section>
+    </main>
 
     <!-- JS FILE -->
     <script src="./js/app.js"></script>
