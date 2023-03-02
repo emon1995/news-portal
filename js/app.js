@@ -26,7 +26,7 @@ const showCategories = (categories) => {
 };
 
 const categoriesItems = async (category_id, category_name) => {
-  console.log("click", category_id, category_name);
+  //   console.log("click", category_id, category_name);
 
   try {
     const URL = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
@@ -39,7 +39,7 @@ const categoriesItems = async (category_id, category_name) => {
 };
 
 const showCategoriesItems = (categoriesItems, category_name) => {
-  //   console.log(categoriesItems);
+  console.log(categoriesItems);
   const categoryItems = document.getElementById("items");
   const categoryName = document.getElementById("categories-name");
   const cardSection = document.getElementById("card-section");
@@ -94,7 +94,9 @@ const showCategoriesItems = (categoriesItems, category_name) => {
               </div>
               <!-- details btn -->
               <div>
-                <button class="btn btn-primary">Details</button>
+                <label for="my-modal" onclick="getDetailsModal('${
+                  category._id
+                }')" class="btn btn-primary">Details</label>
               </div>
             </div>
           </div>
@@ -104,4 +106,39 @@ const showCategoriesItems = (categoriesItems, category_name) => {
   categoryName.innerText = category_name;
   categoryItems.innerText =
     categoriesItems.length === 0 ? 0 : categoriesItems.length;
+};
+
+const getDetailsModal = async (news_id) => {
+  //   console.log("click", news_id);
+  const URL = ` https://openapi.programming-hero.com/api/news/${news_id}`;
+
+  try {
+    const res = await fetch(URL);
+    const data = await res.json();
+    showModalData(data.data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const showModalData = (data) => {
+  const modal = document.getElementById("modal");
+
+  data.forEach((item) => {
+    console.log(item);
+    modal.innerHTML = `
+          <div class="modal-box">
+              <img src="${item.image_url}" alt="img" />
+              <h3 class="font-bold text-lg">
+              ${item.title}
+              </h3>
+              <p class="py-4">
+              ${item.details}
+              </p>
+              <div class="modal-action">
+                <label for="my-modal" class="btn">Close</label>
+              </div>
+            </div>
+      `;
+  });
 };

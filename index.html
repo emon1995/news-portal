@@ -28,7 +28,7 @@
       <div class="navbar bg-base-100 shadow-2xl">
         <div class="flex-1">
           <a class="btn btn-ghost normal-case text-xl"
-            ><span class="bg-cyan-500 p-2 rounded">News</span>
+            ><span class="bg-teal-500 p-2 rounded">News</span>
             <span class="pl-2">Portal</span></a
           >
         </div>
@@ -119,8 +119,12 @@
         </div>
         <!-- TRENDING  -->
         <div>
-          <button class="btn btn-active btn-primary">Today's Pick</button>
-          <button class="btn btn-outline btn-primary">Trending</button>
+          <button onclick="getToday()" class="btn btn-active btn-primary">
+            Today's Pick
+          </button>
+          <button onclick="getTrending()" class="btn btn-outline btn-primary">
+            Trending
+          </button>
         </div>
       </section>
       <!-- CARD SECTION -->
@@ -177,7 +181,16 @@
         <!-- </div>
         </div> -->
       </section>
+      <!-- MODAL SECTION -->
+      <section>
+        <input type="checkbox" id="my-modal" class="modal-toggle" />
+        <div id="modal" class="modal"></div>
+      </section>
     </main>
+    <!-- FOOTER SECTION -->
+    <footer class="text-center text-2xl font-bold bg-teal-500 py-4">
+      <h1>Copyright 2021 News Portal</h1>
+    </footer>
 
     <!-- JS FILE -->
     <script src="./js/app.js"></script>
